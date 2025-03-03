@@ -1,4 +1,4 @@
-# Servicios de Cómputo en AWS
+# Capítulo 2: Servicios de Cómputo en AWS
 
 ## Resumen Ejecutivo
 
