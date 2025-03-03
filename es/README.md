@@ -8,8 +8,8 @@ Todo el contenido en esta carpeta está en español.
 ## Índice General
 
 ### Prefacio
-- [Objetivo de la Guía](objetivo-de-la-guia.md)  
-- [Cómo Usar Este Libro](como-usar-este-libro.md)  
+- [Objetivo de la guía](objetivo-de-la-guia.md)  
+- [Cómo usar este recurso](como-usar-este-recurso.md)  
 - [Agradecimientos](agradecimientos.md)  
 
 ### Sección I: Fundamentos AWS
