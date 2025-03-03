@@ -1,4 +1,4 @@
-# Fundamentos de AWS y Computación en la Nube
+# Capítulo 1: Fundamentos de AWS y Computación en la Nube
 
 ## Resumen Ejecutivo
 
