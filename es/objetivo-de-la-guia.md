@@ -1,4 +1,4 @@
-# Objetivo de la Guía
+# Objetivo de la guía.
 
 Esta guía tiene como propósito principal proporcionar una visión integral y estructurada sobre Amazon Web Services (AWS), abarcando desde los fundamentos de la computación en la nube hasta estrategias avanzadas de implementación y optimización. Está diseñada para:
 
