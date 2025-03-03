@@ -1,4 +1,4 @@
-Capítulo 5: # Seguridad y Cumplimiento en AWS
+# Capítulo 5: Seguridad y Cumplimiento en AWS
 
 ## Resumen Ejecutivo
 
@@ -239,4 +239,173 @@ AWS mantiene numerosas certificaciones:
 
 - Gestión de identidades para aplicaciones
 - Autenticación y autorización
-- Federación con proveedores sociales e empresar
+- Federación con proveedores sociales e empresariales
+- Control de acceso basado en atributos
+- Flujos de autenticación personalizables
+- Protección contra credenciales comprometidas
+
+### AWS Certificate Manager
+
+- Aprovisionamiento y gestión de certificados SSL/TLS
+- Renovación automática
+- Integración con servicios AWS (CloudFront, ALB)
+- Validación de dominio simplificada
+
+## Arquitecturas de Seguridad
+
+### Principios de Diseño Seguro
+
+- **Defensa en profundidad:** Múltiples capas de control
+- **Reducción de superficie de ataque:** Minimizar exposición
+- **Principio de privilegio mínimo:** Solo permisos necesarios
+- **Automatización de seguridad:** Controles programáticos
+- **Diseño para fallos:** Asumir compromisos y planificar respuesta
+- **Visibilidad total:** Logging y monitoreo omnipresente
+
+### Patrones de Arquitectura Seguros
+
+#### Perímetro de VPC Seguro
+
+- Subredes públicas y privadas
+- Bastion hosts para acceso administrativo
+- WAF y Shield para protección perimetral
+- Sistemas de inspección de tráfico
+
+#### Microsegmentación
+
+- Aislamiento a nivel de servicio/aplicación
+- Grupos de seguridad restrictivos
+- VPCs separadas para funciones críticas
+- Control de flujo entre microservicios
+
+#### Seguridad de Datos por Diseño
+
+- Clasificación de datos implementada a nivel arquitectónico
+- Cifrado por defecto
+- Tokenización de información sensible
+- Controles de acceso basados en atributos
+
+## Operaciones de Seguridad en AWS
+
+### Centro de Operaciones de Seguridad (SOC)
+
+- Integración de herramientas AWS en SOC
+- Automatización de respuesta a incidentes
+- Playbooks y runbooks en AWS
+- Simulaciones y ejercicios de seguridad
+
+### DevSecOps
+
+- Seguridad en el pipeline CI/CD
+- Infrastructure as Code (IaC) seguro
+- Escaneo automatizado de vulnerabilidades
+- Pruebas de seguridad continuas
+
+### Monitoreo y Gestión de Eventos de Seguridad
+
+- Centralización de logs (CloudWatch, S3)
+- Correlación de eventos (Security Hub)
+- Alertas y notificaciones (SNS, EventBridge)
+- Visualización y dashboards
+
+## Frameworks y Estándares de Seguridad
+
+### AWS Well-Architected Framework: Pilar de Seguridad
+
+- **Gestión de identidad y acceso**
+- **Controles de detección**
+- **Protección de infraestructura**
+- **Protección de datos**
+- **Respuesta a incidentes**
+
+### Cloud Adoption Framework (CAF): Perspectiva de Seguridad
+
+- Gobernanza
+- Gestión de riesgos
+- Cumplimiento
+- Gestión de identidades
+- Detección y respuesta
+
+### Marcos de Cumplimiento
+
+- CIS AWS Foundations Benchmark
+- NIST Cybersecurity Framework en AWS
+- ISO 27001 en AWS
+- Implementación de GDPR en AWS
+
+## Estrategias de Seguridad Multi-Cuenta
+
+### AWS Organizations
+
+- Segregación de entornos
+- Políticas de control de servicios (SCPs)
+- Gestión centralizada de auditoría
+- Consolidación de facturación
+
+### Estructura de Cuentas Seguras
+
+- Cuenta de gestión dedicada
+- Cuentas separadas por función:
+  - Seguridad y auditoría
+  - Registros centralizados
+  - Desarrollo, pruebas, producción
+  - Cargas de trabajo por clasificación de datos
+
+### AWS Control Tower
+
+- Implementación de arquitecturas multi-cuenta
+- Controles preventivos y de detección
+- Dashboard centralizado de cumplimiento
+- Governo automatizado
+
+## Casos de Estudio y Escenarios
+
+### Migración Segura a la Nube
+
+- Evaluación de riesgos previa
+- Estrategia de migración en fases
+- Refactorización para seguridad nativa en nube
+- Validación y pruebas continuas
+
+### Respuesta a Incidentes en AWS
+
+- Preparación: Templates y runbooks
+- Detección: GuardDuty, CloudTrail, Security Hub
+- Contención: IAM, grupos de seguridad, aislamiento
+- Erradicación: Imágenes doradas, infraestructura inmutable
+- Recuperación: Backups, AMIs, CloudFormation
+- Lecciones aprendidas: Refinamiento de detección
+
+### Cumplimiento PCI DSS en AWS
+
+- Mapeo de requisitos PCI a controles AWS
+- Segmentación de datos de tarjetas
+- Logging y monitorización
+- Gestión de vulnerabilidades
+- Validación de cumplimiento
+
+## Tendencias Futuras en Seguridad AWS
+
+- **Zero Trust Architecture:** Evolución más allá del perímetro tradicional
+- **Seguridad Serverless:** Controles adaptados a arquitecturas sin servidor
+- **Machine Learning para Seguridad:** Detección avanzada de amenazas
+- **IAM de próxima generación:** Control de acceso contextual y adaptativo
+- **Security as Code:** Integración completa de seguridad en IaC
+- **Edge Security:** Protección extendida a nivel de borde
+
+## Conclusión
+
+La seguridad en AWS es un proceso continuo que requiere una combinación de tecnologías, procesos y personas. El amplio conjunto de servicios de seguridad de AWS proporciona las herramientas necesarias para implementar arquitecturas seguras, pero la responsabilidad de configurar y utilizar estos servicios correctamente recae en los clientes, siguiendo el modelo de responsabilidad compartida.
+
+Las organizaciones que adoptan un enfoque proactivo de seguridad, implementando las mejores prácticas y utilizando el conjunto completo de servicios de seguridad de AWS, pueden no solo proteger sus datos y aplicaciones, sino también acelerar la innovación al reducir la carga de la implementación y gestión de la infraestructura de seguridad.
+
+La clave del éxito es integrar la seguridad desde el principio en todas las facetas de la estrategia de nube, creando una cultura de "seguridad por diseño" que permita a las organizaciones aprovechar los beneficios de la nube sin comprometer la protección de sus activos más valiosos.
+
+## Referencias y Recursos Adicionales
+
+- [AWS Security Documentation](https://docs.aws.amazon.com/security/)
+- [AWS Security Blog](https://aws.amazon.com/blogs/security/)
+- [AWS Security Best Practices](https://aws.amazon.com/architecture/security-identity-compliance/)
+- [AWS Compliance Programs](https://aws.amazon.com/compliance/programs/)
+- [AWS Security Bulletins](https://aws.amazon.com/security/security-bulletins/)
+- [AWS Well-Architected Framework: Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/)
